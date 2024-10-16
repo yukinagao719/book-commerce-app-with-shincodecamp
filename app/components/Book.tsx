@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { BookType } from "../types/types";
 import { useState } from "react";
-import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { User } from "../types/types";
 
@@ -16,7 +15,6 @@ type BookProps = {
 
 const Book = ({ book, user, isPurchased }: BookProps) => {
   const [showModal, setShowModal] = useState(false);
-  const { data: session } = useSession();
   // const user= session?.user;
   const router = useRouter();
 
