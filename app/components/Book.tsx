@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import Image from "next/image";
@@ -10,13 +9,14 @@ import { useRouter } from "next/navigation";
 
 type BookProps = {
   book: BookType;
+  user: any
   isPurchased: boolean;
 };
 
-const Book = ({ book, isPurchased }: BookProps) => {
+const Book = ({ book, user, isPurchased }: BookProps) => {
   const [showModal, setShowModal] = useState(false);
   const { data: session } = useSession();
-  const user: any = session?.user;
+  // const user= session?.user;
   const router = useRouter();
 
   const startCheckout = async () => {
