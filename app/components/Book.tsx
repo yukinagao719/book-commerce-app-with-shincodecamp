@@ -6,10 +6,11 @@ import { BookType } from "../types/types";
 import { useState } from "react";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
+import { User } from "../types/types";
 
 type BookProps = {
   book: BookType;
-  user: any
+  user: User | null; // user might be null if not logged in
   isPurchased: boolean;
 };
 
