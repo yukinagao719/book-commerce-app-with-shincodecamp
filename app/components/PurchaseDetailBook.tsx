@@ -17,8 +17,8 @@ const PurchaseDetailBook = ({purchaseDetailBook}: purchaseDetailBookProps) => {
         priority
         src={purchaseDetailBook.thumbnail.url}
         alt={purchaseDetailBook.title}
-        width={450}
-        height={350}
+        width={500}
+        height={500}
         className="rounded-t-md"
       />
       <div className="px-4 py-4 bg-slate-100 rounded-b-md">
